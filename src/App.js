@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Balance from './Balance'
+import History from './History'
 function App() {
+  let trans=[
+    {id:1,
+    description:'Books',
+    amount:-20},
+    {id:2,
+      description:'Salary',
+      amount:200},
+    {id:3,
+    description:'Grocery',
+    amount:-30}
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className='App'>
+    <h1>
+      Expense Tracker by MHK
+    </h1>
+    <Balance trans={trans}/>
+    <History trans={trans}/>
+  </div>
   );
 }
 
