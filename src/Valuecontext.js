@@ -2,16 +2,7 @@ import React from 'react'
 import Valuereducer from './Valuereducer'
 const initialState = {
 trans: [
-         {
-             id:1,
-             description:'Books',
-             amount:-40
-         },
-         {
-             id:2,
-             description:'Salary',
-             amount:2000
-         }
+
      ]
    }
 // const trans= [
