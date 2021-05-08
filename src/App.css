@@ -1,8 +1,168 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+body{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+ul{
+  list-style:none;
+  padding: 0;
+}
 .App {
+  /* margin: 30px auto; */
+  width: 350px;
+ /* background-color:#f7f7f7;
+  text-align: center;
+  overflow: hidden; */
+  
+}
+.header{
+  letter-spacing: 1px;
+  margin: 0;
   text-align: center;
 }
+h4{
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1{
+  margin: 0;
+  text-align: center;
+}
+.balance{
+  margin-top:2em;
+}
+/* .balance-amnt{
+  font-size: 2em;
+} */
+.income-exp{
+  /* margin-top:1em; */
+  box-shadow: var(--box-shadow);
+  margin:20px 0;
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  background-color:white;
+  /* align-items: center; */
+  justify-content: center;
+  /* padding-top: 1.5em;
+  padding-bottom: 1.5em; */
+}
+.income{
+  padding-right: 2em;
 
+  border-right: 1.7px solid #bbb;
+}
+.money{
+letter-spacing: 1px;
+font-size:20px;
+margin:5px 0;
+}
+.money.plus{
+  color: #b6960a;
+  font-weight: 700;
+  text-align: center;
+}
+.money.minus{
+  color: #2da3ad;
+  font-weight: 700;
+  text-align: center;
+}
+.expense{
+  padding-left:2rem;
 
+}
+.trans-hist{
+  margin-top:40px; 
+}
+.trans-hist h3{
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  border-bottom: 1px solid #bbb;
+} 
+.trans-hist li{
+  background-color:white;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+color: #333;;
+}
+.delbtn{
+  /* display:none; */
+  cursor: pointer;
+  position: relative;
+  background-color:#8a6a66;
+  color: #fff;
+  font-size: 20px;
+  border: 0;
+  position: absolute;
+  /* display:none; */
+  opacity: 0;
+  transition:opacity 0.3s ease;
+  transform:translate(-150%);
+  
+}
+li:hover .delbtn{
+  /* display: block; */
+  opacity: 100%;
+  transition:opacity 0.5s ease;
+}
+.minussign:hover{
+  background-color:#b6960a;
+}
+.plussign:hover{
+  background-color:#2da3ad;
+}
+.minussign{
+  border-right: 5px solid #b6960a;
+}
+.plussign{
+  border-right: 5px solid #2da3ad;
+}
+.add-trans{
+  margin-top:1em;
+
+}
+.add-trans h3{
+  text-align:center;
+  padding-bottom: 10px;
+  margin:40px 0 10px;
+  border-bottom: 1px solid #bbb;
+}
+.add-trans input,.add-trans button{
+  width:100%;
+  margin-bottom: 0.7em;
+  margin-top: 0.5em;
+  padding: 10px;
+  border:1px solid #bbb;
+  border-radius: 5px;
+  font-size: 16px;
+}
+label{
+  margin-bottom: 0.7em;
+  font-weight: 700;
+}
+.add-trans button{
+  padding: 10px;
+  color: white;
+  background-color:#b0c4de;
+  font-size: 16px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
